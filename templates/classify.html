@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="form-signin" method=post enctype=multipart/form-data>
+	<div><img class="pred_img" width="300" height="300" src="{{ url_for('send_file', filename=image_file_name)}}" />
+	</div>
+	<p class="mt-5 mb-3 " style="font-weight: bold;">Possível Diagnóstico: </p>
+	<h1 class="h5 mb-3 font-weight-normal"><span style="font-weight: bold; color:red;">{{ label }}</span> </p>
+</form>
+
+<a class="btn btn-primary btn-lg btn-block" href="/" role="button">Voltar</a>
+<br>
+{% endblock %}

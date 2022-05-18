@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/classify" method="post" class="form-signin" enctype=multipart/form-data>
+  <h1 class="h2 mb-3 font-weight-normal">TCC</h1>
+  <h2 class="h4 mb-3 font-weight-normal">Faça o upload do Raio-X</h2>
+
+  <input class="file-input" type="file" id="image" name="image" onchange="preview_image(event)">
+  <br>
+
+  <img id="output-image" class="rounded mx-auto d-block" />
+  <button class="btn btn-lg btn-primary btn-block" value="Classificar" name="image" id="classify_button"
+    type="submit">Classificar</button>
+  <br>
+  <div class="row">
+    <center>
+      <div class="col-sm-4 align-self-center outerDiv"><img src="/static/figs/facamp.png" alt="" width="150"></div>
+    </center>
+  </div>
+</form>
+{% endblock %}
